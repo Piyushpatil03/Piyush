@@ -215,7 +215,7 @@ body.nav-active { overflow: hidden; }
   color: var(--white);
 }
 
-.section-text { font-size: var(--fs-5); }
+.section-text { font-size: 17px; }
 
 .section-title { margin-block-end: 16px; }
 
@@ -374,6 +374,7 @@ body.nav-active { overflow: hidden; }
 .hero-banner {
   position: relative;
   max-width: max-content;
+  width: 450px;
   margin-inline: auto;
 }
 
@@ -418,7 +419,7 @@ body.nav-active { overflow: hidden; }
 .about .wrapper {
   display: grid;
   gap: 50px;
-  margin-block-end: 70px;
+  margin-block-end: 0px;
 }
 
 .progress-list .label-wrapper {
@@ -448,6 +449,37 @@ body.nav-active { overflow: hidden; }
 }
 
 .about-card .card-title { margin-block: 16px 10px; }
+
+.skills-container {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  gap: 10px;
+  justify-content: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+.skill {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 12px 15px;
+  font-size: 17px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+
+@media (max-width: 600px) {
+  .skill {
+      font-size: 14px;
+      padding: 8px 12px;
+  }
+}
 
 
 
@@ -479,7 +511,8 @@ body.nav-active { overflow: hidden; }
 .project-card-2,
 :is(.project-card-3, .project-card-4) .card-content { padding: var(--padding); }
 
-.project-card-1 { padding-block-end: 0; }
+.project-card-1, .project-card-2, .project-card-3 { padding-block-end: 0; }
+
 
 .project :is(.project-card-3, .project-card-4) { gap: 0; }
 
@@ -503,7 +536,30 @@ body.nav-active { overflow: hidden; }
 
 .project-card .btn-text:is(:hover, :focus-visible) { gap: 10px; }
 
+.skills-project-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  gap: 10px;
+  justify-content: left;
+  border-radius: 10px;
+  padding-bottom: 15px;
+}
 
+.skill-project {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 7px 10px;
+  font-size: 14px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+
+
+/*-----------------------------------*\
+  #EXPERIENCE
+\*-----------------------------------*/
 
 
 
@@ -762,9 +818,9 @@ textarea.input-field {
   .hero { padding-block-start: calc(var(--section-padding) + 80px); }
 
   .hero .container {
-    grid-template-columns: 0.8fr 1fr;
+    grid-template-columns: 0.6fr 1.4fr;
     align-items: center;
-    gap: 100px;
+    /* gap: 100px; */
   }
 
   .hero-content { text-align: left; }
@@ -809,7 +865,7 @@ textarea.input-field {
 
   .project-card-1 .card-content { padding-block-end: var(--padding); }
 
-  .project-card-2 .card-content { order: 1; }
+  .project-card-2 .card-content { order: 1; padding-block-end: var(--padding);}
 
 
 
@@ -883,7 +939,7 @@ textarea.input-field {
    * HERO
    */
 
-  .hero .container { grid-template-columns: 1fr 0.8fr; }
+  .hero .container { grid-template-columns: 0.6fr 1.4fr; }
 
   .hero .section-text { --fs-5: 2.4rem; }
 

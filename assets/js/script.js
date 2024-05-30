@@ -70,3 +70,29 @@ for (let i = 0, len = revealDelayElements.length; i < len; i++) {
 
 window.addEventListener("scroll", reveal);
 window.addEventListener("load", reveal);
+
+
+// form submission
+
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent default form submission
+
+  // Collect form data
+  const name = event.target.name.value;
+  const email = event.target.email_address.value;
+  const message = event.target.message.value;
+
+  // Send email using EmailJS
+  emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+    name: name,
+    email: email,
+    message: message
+  }).then(function(response) {
+    console.log('SUCCESS!', response.status, response.text);
+    alert('Your message has been sent successfully!');
+  }, function(error) {
+    console.log('FAILED...', error);
+    alert('Failed to send the message. Please try again later.');
+  });
+});
