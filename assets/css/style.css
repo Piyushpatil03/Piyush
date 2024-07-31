@@ -373,8 +373,7 @@ body.nav-active { overflow: hidden; }
 
 .hero-banner {
   position: relative;
-  max-width: max-content;
-  width: 450px;
+  max-width: auto;
   margin-inline: auto;
 }
 
@@ -749,7 +748,7 @@ textarea.input-field {
      * spacing
      */
 
-    --section-padding: 120px;
+    --section-padding: 100px;
 
   }
 
